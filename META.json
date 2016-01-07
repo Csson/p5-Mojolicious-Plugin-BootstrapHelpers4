@@ -66,13 +66,17 @@
             "Dist::Zilla::Plugin::Readme" : "0",
             "Dist::Zilla::Plugin::ReadmeAnyFromPod" : "0",
             "Dist::Zilla::Plugin::ReversionOnRelease" : "0",
+            "Dist::Zilla::Plugin::Run::AfterBuild" : "0",
             "Dist::Zilla::Plugin::RunExtraTests" : "0",
             "Dist::Zilla::Plugin::ShareDir" : "0",
+            "Dist::Zilla::Plugin::Stenciller::HtmlExamples" : "0",
+            "Dist::Zilla::Plugin::Stenciller::MojoliciousTests" : "0",
             "Dist::Zilla::Plugin::Test::ReportPrereqs" : "0",
             "Dist::Zilla::Plugin::TestRelease" : "0",
             "Dist::Zilla::Plugin::TravisYML" : "0",
             "Dist::Zilla::Plugin::UploadToCPAN" : "0",
             "Pod::Elemental::Transformer::List" : "0",
+            "Pod::Elemental::Transformer::Stenciller" : "0",
             "Pod::Weaver::Plugin::SingleEncoding" : "0",
             "Pod::Weaver::Plugin::Transformer" : "0",
             "Pod::Weaver::PluginBundle::CorePrep" : "0",
@@ -82,18 +86,24 @@
             "Pod::Weaver::Section::Generic" : "0",
             "Pod::Weaver::Section::Homepage::DefaultCPAN" : "0",
             "Pod::Weaver::Section::Leftovers" : "0",
-            "Pod::Weaver::Section::Legal" : "0",
+            "Pod::Weaver::Section::Legal::Supplemented" : "0",
             "Pod::Weaver::Section::Name" : "0",
             "Pod::Weaver::Section::Region" : "0",
             "Pod::Weaver::Section::Source::DefaultGitHub" : "0",
             "Pod::Weaver::Section::Version" : "0",
+            "Stenciller" : "0.1301",
             "Test::Pod" : "1.41",
             "Test::Warnings" : "0"
          }
       },
       "runtime" : {
          "requires" : {
-            "perl" : "5.016000"
+            "Mojolicious" : "5.0",
+            "Scalar::Util" : "1.29",
+            "String::Random" : "0",
+            "String::Trim" : "0.004",
+            "experimental" : "0.008",
+            "perl" : "5.020000"
          }
       },
       "test" : {
@@ -103,6 +113,7 @@
          "requires" : {
             "ExtUtils::MakeMaker" : "0",
             "File::Spec" : "0",
+            "Test::Mojo::Trim" : "0.03",
             "Test::More" : "0.96"
          }
       }
@@ -110,6 +121,30 @@
    "provides" : {
       "Mojolicious::Plugin::BootstrapHelpers4" : {
          "file" : "lib/Mojolicious/Plugin/BootstrapHelpers4.pm",
+         "version" : "0.0001"
+      },
+      "Mojolicious::Plugin::BootstrapHelpers4::Component" : {
+         "file" : "lib/Mojolicious/Plugin/BootstrapHelpers4/Component.pm",
+         "version" : "0.0001"
+      },
+      "Mojolicious::Plugin::BootstrapHelpers4::Component::Button" : {
+         "file" : "lib/Mojolicious/Plugin/BootstrapHelpers4/Component/Button.pm",
+         "version" : "0.0001"
+      },
+      "Mojolicious::Plugin::BootstrapHelpers4::Component::Label" : {
+         "file" : "lib/Mojolicious/Plugin/BootstrapHelpers4/Component/Label.pm",
+         "version" : "0.0001"
+      },
+      "Mojolicious::Plugin::BootstrapHelpers4::Component::Table" : {
+         "file" : "lib/Mojolicious/Plugin/BootstrapHelpers4/Component/Table.pm",
+         "version" : "0.0001"
+      },
+      "Mojolicious::Plugin::BootstrapHelpers4::Elk" : {
+         "file" : "lib/Mojolicious/Plugin/BootstrapHelpers4/Elk.pm",
+         "version" : "0.0001"
+      },
+      "Mojolicious::Plugin::BootstrapHelpers4::Util" : {
+         "file" : "lib/Mojolicious/Plugin/BootstrapHelpers4/Util.pm",
          "version" : "0.0001"
       }
    },

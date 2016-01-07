@@ -1,0 +1,97 @@
+== stencil ==
+
+A basic table:
+
+--input--
+    <%= table begin %>
+        <thead>
+            <tr>
+                <th>th 1</th>
+                <th>th 2</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Cell 1</td>
+                <td>Cell 2</td>
+            </tr>
+            <tr>
+                <td>Cell 1</td>
+                <td>Cell 2</td>
+            </tr>
+        </tbody>
+    <% end %>
+--end input--
+--output--
+    <table class="table">
+        <thead>
+            <tr>
+                <th>th 1</th>
+                <th>th 2</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Cell 1</td>
+                <td>Cell 2</td>
+            </tr>
+            <tr>
+                <td>Cell 1</td>
+                <td>Cell 2</td>
+            </tr>
+        </tbody>
+    </table>
+--end output--
+
+== stencil ==
+
+A table with data attributes:
+
+--input--
+    <%= table data => { simple => 'value', nested => { key => 'stuff' } }, begin %>
+        <thead>
+            <tr>
+                <th>th 1</th>
+                <th>th 2</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Cell 1</td>
+                <td>Cell 2</td>
+            </tr>
+            <tr>
+                <td>Cell 1</td>
+                <td>Cell 2</td>
+            </tr>
+        </tbody>
+    <% end %>
+--end input--
+--output--
+    <table class="table" data-simple="value" data-nested-key="stuff">
+        <thead>
+            <tr>
+                <th>th 1</th>
+                <th>th 2</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Cell 1</td>
+                <td>Cell 2</td>
+            </tr>
+            <tr>
+                <td>Cell 1</td>
+                <td>Cell 2</td>
+            </tr>
+        </tbody>
+    </table>
+--end output--
+
+== stencil ==
+
+A table without begin/end:
+
+--input--
+    %= table qwr('inverse')
+--end input--
+--output--
+    <table class="table table-inverse">
+    </table>
+--end output--

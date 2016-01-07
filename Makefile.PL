@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-use 5.016000;
+use 5.020000;
 
 use ExtUtils::MakeMaker;
 
@@ -14,12 +14,19 @@ my %WriteMakefileArgs = (
   },
   "DISTNAME" => "Mojolicious-Plugin-BootstrapHelpers4",
   "LICENSE" => "perl",
-  "MIN_PERL_VERSION" => "5.016000",
+  "MIN_PERL_VERSION" => "5.020000",
   "NAME" => "Mojolicious::Plugin::BootstrapHelpers4",
-  "PREREQ_PM" => {},
+  "PREREQ_PM" => {
+    "Mojolicious" => "5.0",
+    "Scalar::Util" => "1.29",
+    "String::Random" => 0,
+    "String::Trim" => "0.004",
+    "experimental" => "0.008"
+  },
   "TEST_REQUIRES" => {
     "ExtUtils::MakeMaker" => 0,
     "File::Spec" => 0,
+    "Test::Mojo::Trim" => "0.03",
     "Test::More" => "0.96"
   },
   "VERSION" => "0.0001",
@@ -32,7 +39,13 @@ my %WriteMakefileArgs = (
 my %FallbackPrereqs = (
   "ExtUtils::MakeMaker" => 0,
   "File::Spec" => 0,
-  "Test::More" => "0.96"
+  "Mojolicious" => "5.0",
+  "Scalar::Util" => "1.29",
+  "String::Random" => 0,
+  "String::Trim" => "0.004",
+  "Test::Mojo::Trim" => "0.03",
+  "Test::More" => "0.96",
+  "experimental" => "0.008"
 );
 
 

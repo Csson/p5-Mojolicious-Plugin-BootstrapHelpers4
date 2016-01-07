@@ -1,0 +1,102 @@
+== stencil ==
+
+An ordinary button, with applied shortcuts:
+
+--input--
+    %= button 'The example 5' => qwr('lg warning')
+--end input--
+--output--
+    <button class="btn btn-lg btn-warning" type="button">The example 5</button>
+--end output--
+
+
+
+== stencil ==
+
+With a url the button turns into a link:
+
+--input--
+    %= button 'The example 1' => ['http://www.example.com/'], qwr('sm')
+--end input--
+--output--
+    <a class="btn btn-default btn-sm" href="http://www.example.com/" role="button">The example 1</a>
+--end output--
+
+
+
+== stencil ==
+
+A submit button for posting forms:
+
+--input--
+    %= submit 'Save 2', qwr('primary')
+--end input--
+--output--
+    <input class="btn btn-primary" type="submit" value="Save 2" />
+--end output--
+
+
+
+== stencil { to_pod => 0 } ==
+--input--
+    %= submit 'Save 2', qwr('primary disabled')
+--end input--
+--output--
+    <input class="btn btn-primary" disabled type="submit" value="Save 2" />
+--end output--
+
+
+
+== stencil { to_pod => 0 } ==
+--input--
+    %= button 'The example 2' => [url_for]
+--end input--
+--output--
+    <a class="btn btn-default" href="/button_50" role="button">The example 2</a>
+--end output--
+
+== stencil { to_pod => 0 } ==
+--input--
+    %= button 'The example 3' => ['panel_1']
+--end input--
+--output--
+    <a class="btn btn-default" href="panel_1" role="button">The example 3</a>
+--end output--
+
+
+== stencil { to_pod => 0 } ==
+--input--
+    %= button 'The example 4'
+--end input--
+--output--
+    <button class="btn btn-default" type="button">The example 4</button>
+--end output--
+
+
+== stencil { to_pod => 0 } ==
+--input--
+    %= button [url_for], qwr('disabled'), begin
+       The Example 6
+    %  end
+--end input--
+--output--
+    <a class="btn btn-default disabled" href="/button_76" role="button"> The Example 6 </a>
+--end output--
+
+
+== stencil { to_pod => 0 } ==
+--input--
+    %= submit 'Save 1'
+--end input--
+--output--
+    <input class="btn btn-default" type="submit" value="Save 1" />
+--end output--
+
+== stencil { loop => [qw/active block/] } ==
+--input--
+    %= button 'Loop', qwr('[var]')
+--end input--
+--output--
+    <button class="btn btn-default [var]" type="button">Loop</button>
+--end output--
+

@@ -12,10 +12,42 @@ header:
 prereqs:
   runtime:
     requires:
-      - perl: 5.016000
+      - perl: 5.020000
+      - Mojolicious: 5.0
+      - Scalar::Util: 1.29
+      - String::Trim: 0.004
+      - String::Random
+      - experimental: 0.008
+
+  test:
+    requires:
+      - Test::Mojo::Trim: 0.03
+  
+  develop:
+    requires:
+      - Stenciller: 0.1301
 
 plugins:
   - +config: Author::CSSON
+
+  - +extend_plugin: Git::GatherDir
+    exclude_match:
+     - examples/.*\.html
+
+  - +plugin: Run::AfterBuild
+    run: cp %d/examples/*.html examples
+
+  - +plugin: Stenciller::HtmlExamples
+    source_directory: examples/source
+    output_directory: examples
+    template_file: examples/source/template.html
+    output_also_as_html: 1
+    separator: '<hr />'
+
+  - +plugin: Stenciller::MojoliciousTests
+    source_directory: examples/source
+    output_directory: t
+    template_file: examples/source/template.test
 
 ---
 doctype: weaver
@@ -23,4 +55,17 @@ doctype: weaver
 plugins:
   - +config: Author::CSSON
 
-  - +remove_plugin: Splint
+  - +plugin: Stenciller
+    +base: -Transformer
+    +in: Elemental
+    transformer: Stenciller
+    directory: examples/source
+    text_as_html_pod: 1
+
+  - +replace_plugin: Legal
+    +with: Legal::Supplemented
+    header: WHat
+    text_after:
+     - Bootstrap itself is (c) Twitter. See L<their license information|http://getbootstrap.com/getting-started/#license-faqs>.
+     - ~
+     - L<Mojolicious::Plugin::BootstrapHelpers4> is third party software, and is not endorsed by Twitter.

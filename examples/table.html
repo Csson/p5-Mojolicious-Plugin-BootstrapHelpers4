@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Examples</title>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            
+
+<p>A basic table:</p>
+<pre>&lt;%= table begin %&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;th 1&lt;/th&gt;
+            &lt;th&gt;th 2&lt;/th&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Cell 1&lt;/td&gt;
+            &lt;td&gt;Cell 2&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Cell 1&lt;/td&gt;
+            &lt;td&gt;Cell 2&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;% end %&gt;</pre>
+<pre>&lt;table class=&quot;table&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;th 1&lt;/th&gt;
+            &lt;th&gt;th 2&lt;/th&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Cell 1&lt;/td&gt;
+            &lt;td&gt;Cell 2&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Cell 1&lt;/td&gt;
+            &lt;td&gt;Cell 2&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</pre>
+<div>    <table class="table">        <thead>            <tr>                <th>th 1</th>                <th>th 2</th>        </thead>        <tbody>            <tr>                <td>Cell 1</td>                <td>Cell 2</td>            </tr>            <tr>                <td>Cell 1</td>                <td>Cell 2</td>            </tr>        </tbody>    </table></div>
+<hr />
+<p>A table with data attributes:</p>
+<pre>&lt;%= table data =&gt; { simple =&gt; &#39;value&#39;, nested =&gt; { key =&gt; &#39;stuff&#39; } }, begin %&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;th 1&lt;/th&gt;
+            &lt;th&gt;th 2&lt;/th&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Cell 1&lt;/td&gt;
+            &lt;td&gt;Cell 2&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Cell 1&lt;/td&gt;
+            &lt;td&gt;Cell 2&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;% end %&gt;</pre>
+<pre>&lt;table class=&quot;table&quot; data-simple=&quot;value&quot; data-nested-key=&quot;stuff&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;th 1&lt;/th&gt;
+            &lt;th&gt;th 2&lt;/th&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Cell 1&lt;/td&gt;
+            &lt;td&gt;Cell 2&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Cell 1&lt;/td&gt;
+            &lt;td&gt;Cell 2&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</pre>
+<div>    <table class="table" data-simple="value" data-nested-key="stuff">        <thead>            <tr>                <th>th 1</th>                <th>th 2</th>        </thead>        <tbody>            <tr>                <td>Cell 1</td>                <td>Cell 2</td>            </tr>            <tr>                <td>Cell 1</td>                <td>Cell 2</td>            </tr>        </tbody>    </table></div>
+<hr />
+<p>A table without begin/end:</p>
+<pre>%= table qwr(&#39;inverse&#39;)</pre>
+<pre>&lt;table class=&quot;table table-inverse&quot;&gt;
+&lt;/table&gt;</pre>
+<div>    <table class="table table-inverse">    </table></div>
+        </div>
+        <pre style="background-color: #fff; border-width: 0px;">
+
+
+
+        </pre>
+    </body>
+</html>
