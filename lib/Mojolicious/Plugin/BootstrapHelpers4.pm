@@ -14,6 +14,7 @@ package Mojolicious::Plugin::BootstrapHelpers4 {
     sub register($self, $app, $args) {
 
         my $helpers = {
+            cdn => ['Mojolicious::Plugin::BootstrapHelpers4::Component::CDN'],
             button => ['Mojolicious::Plugin::BootstrapHelpers4::Component::Button', type => 'button'],
             submit => ['Mojolicious::Plugin::BootstrapHelpers4::Component::Button', type => 'submit'],
             label => ['Mojolicious::Plugin::BootstrapHelpers4::Component::Label'],

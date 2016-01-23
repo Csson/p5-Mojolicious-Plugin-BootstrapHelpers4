@@ -51,7 +51,7 @@ package Mojolicious::Plugin::BootstrapHelpers4::Component::Button {
         my @size_settings = $self->filter_settings(sub { any(qw/lg sm/) eq $_ });
         my @misc_settings = $self->filter_settings(sub { none(@appearance_settings, @size_settings) eq $_ });
 
-        push @appearance_settings => 'default' if !scalar @appearance_settings;
+        push @appearance_settings => 'primary' if !scalar @appearance_settings;
         my @classes = ('btn', sort map { sprintf 'btn-%s', $_ } (@appearance_settings, @size_settings));
         push @classes => sort grep !/disabled/ => @misc_settings;
         my $attr = { class => \@classes };

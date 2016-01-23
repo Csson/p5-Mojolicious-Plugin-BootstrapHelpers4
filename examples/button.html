@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>Examples</title>
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    </head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
 
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-  y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    </head>
     <body>
         <div class="container">
             
@@ -19,8 +19,8 @@
 <hr />
 <p>With a url the button turns into a link:</p>
 <pre>%= button &#39;The example 1&#39; =&gt; [&#39;http://www.example.com/&#39;], qwr(&#39;sm&#39;)</pre>
-<pre>&lt;a class=&quot;btn btn-default btn-sm&quot; href=&quot;http://www.example.com/&quot; role=&quot;button&quot;&gt;The example 1&lt;/a&gt;</pre>
-<div>    <a class="btn btn-default btn-sm" href="http://www.example.com/" role="button">The example 1</a></div>
+<pre>&lt;a class=&quot;btn btn-primary btn-sm&quot; href=&quot;http://www.example.com/&quot; role=&quot;button&quot;&gt;The example 1&lt;/a&gt;</pre>
+<div>    <a class="btn btn-primary btn-sm" href="http://www.example.com/" role="button">The example 1</a></div>
 <hr />
 <p>A submit button for posting forms:</p>
 <pre>%= submit &#39;Save 2&#39;, qwr(&#39;primary&#39;)</pre>
@@ -32,39 +32,46 @@
 <div>    <input class="btn btn-primary" disabled type="submit" value="Save 2" /></div>
 <hr />
 <pre>%= button &#39;The example 2&#39; =&gt; [url_for]</pre>
-<pre>&lt;a class=&quot;btn btn-default&quot; href=&quot;/button_50&quot; role=&quot;button&quot;&gt;The example 2&lt;/a&gt;</pre>
-<div>    <a class="btn btn-default" href="/button_50" role="button">The example 2</a></div>
+<pre>&lt;a class=&quot;btn btn-primary&quot; href=&quot;/button_50&quot; role=&quot;button&quot;&gt;The example 2&lt;/a&gt;</pre>
+<div>    <a class="btn btn-primary" href="/button_50" role="button">The example 2</a></div>
 <hr />
 <pre>%= button &#39;The example 3&#39; =&gt; [&#39;panel_1&#39;]</pre>
-<pre>&lt;a class=&quot;btn btn-default&quot; href=&quot;panel_1&quot; role=&quot;button&quot;&gt;The example 3&lt;/a&gt;</pre>
-<div>    <a class="btn btn-default" href="panel_1" role="button">The example 3</a></div>
+<pre>&lt;a class=&quot;btn btn-primary&quot; href=&quot;panel_1&quot; role=&quot;button&quot;&gt;The example 3&lt;/a&gt;</pre>
+<div>    <a class="btn btn-primary" href="panel_1" role="button">The example 3</a></div>
 <hr />
 <pre>%= button &#39;The example 4&#39;</pre>
-<pre>&lt;button class=&quot;btn btn-default&quot; type=&quot;button&quot;&gt;The example 4&lt;/button&gt;</pre>
-<div>    <button class="btn btn-default" type="button">The example 4</button></div>
+<pre>&lt;button class=&quot;btn btn-primary&quot; type=&quot;button&quot;&gt;The example 4&lt;/button&gt;</pre>
+<div>    <button class="btn btn-primary" type="button">The example 4</button></div>
 <hr />
 <pre>%= button [url_for], qwr(&#39;disabled&#39;), begin
    The Example 6
 %  end</pre>
-<pre>&lt;a class=&quot;btn btn-default disabled&quot; href=&quot;/button_76&quot; role=&quot;button&quot;&gt; The Example 6 &lt;/a&gt;</pre>
-<div>    <a class="btn btn-default disabled" href="/button_76" role="button"> The Example 6 </a></div>
+<pre>&lt;a class=&quot;btn btn-primary disabled&quot; href=&quot;/button_76&quot; role=&quot;button&quot;&gt; The Example 6 &lt;/a&gt;</pre>
+<div>    <a class="btn btn-primary disabled" href="/button_76" role="button"> The Example 6 </a></div>
 <hr />
 <pre>%= submit &#39;Save 1&#39;</pre>
-<pre>&lt;input class=&quot;btn btn-default&quot; type=&quot;submit&quot; value=&quot;Save 1&quot; /&gt;</pre>
-<div>    <input class="btn btn-default" type="submit" value="Save 1" /></div>
+<pre>&lt;input class=&quot;btn btn-primary&quot; type=&quot;submit&quot; value=&quot;Save 1&quot; /&gt;</pre>
+<div>    <input class="btn btn-primary" type="submit" value="Save 1" /></div>
 <hr />
 <pre>%= button &#39;Loop&#39;, qwr(&#39;active&#39;)</pre>
-<pre>&lt;button class=&quot;btn btn-default active&quot; type=&quot;button&quot;&gt;Loop&lt;/button&gt;</pre>
-<div>    <button class="btn btn-default active" type="button">Loop</button></div>
+<pre>&lt;button class=&quot;btn btn-primary active&quot; type=&quot;button&quot;&gt;Loop&lt;/button&gt;</pre>
+<div>    <button class="btn btn-primary active" type="button">Loop</button></div>
 <hr />
 <pre>%= button &#39;Loop&#39;, qwr(&#39;block&#39;)</pre>
-<pre>&lt;button class=&quot;btn btn-default block&quot; type=&quot;button&quot;&gt;Loop&lt;/button&gt;</pre>
-<div>    <button class="btn btn-default block" type="button">Loop</button></div>
+<pre>&lt;button class=&quot;btn btn-primary block&quot; type=&quot;button&quot;&gt;Loop&lt;/button&gt;</pre>
+<div>    <button class="btn btn-primary block" type="button">Loop</button></div>
+<hr />
+<p>A toggle button</p>
+<pre>%= button &#39;Can toggle&#39;, qwr(&#39;active toggle danger&#39;)</pre>
+<pre>&lt;button aria-pressed=&quot;true&quot; class=&quot;btn btn-danger active toggle&quot; data-toggle=&quot;button&quot; type=&quot;button&quot;&gt;Can toggle&lt;/button&gt;</pre>
+<div>    <button aria-pressed="true" class="btn btn-danger active toggle" data-toggle="button" type="button">Can toggle</button></div>
         </div>
         <pre style="background-color: #fff; border-width: 0px;">
 
 
 
         </pre>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
     </body>
 </html>

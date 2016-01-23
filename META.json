@@ -4,7 +4,7 @@
       "Erik Carlsson <info@code301.com>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 5.042, Dist::Iller version 0.1210, CPAN::Meta::Converter version 2.143240",
+   "generated_by" : "Dist::Zilla version 5.043, Dist::Iller version 0.1204, CPAN::Meta::Converter version 2.143240",
    "license" : [
       "perl_5"
    ],
@@ -31,8 +31,8 @@
       },
       "develop" : {
          "requires" : {
+            "Dist::Iller::Config::Author::CSSON" : "0",
             "Dist::Zilla::Plugin::CheckChangesHasContent" : "0",
-            "Dist::Zilla::Plugin::CheckExtraTests" : "0",
             "Dist::Zilla::Plugin::Clean" : "0",
             "Dist::Zilla::Plugin::ConfirmRelease" : "0",
             "Dist::Zilla::Plugin::CopyFilesFromBuild" : "0",
@@ -71,6 +71,7 @@
             "Dist::Zilla::Plugin::ShareDir" : "0",
             "Dist::Zilla::Plugin::Stenciller::HtmlExamples" : "0",
             "Dist::Zilla::Plugin::Stenciller::MojoliciousTests" : "0",
+            "Dist::Zilla::Plugin::Test::Compile" : "0",
             "Dist::Zilla::Plugin::Test::ReportPrereqs" : "0",
             "Dist::Zilla::Plugin::TestRelease" : "0",
             "Dist::Zilla::Plugin::TravisYML" : "0",
@@ -113,6 +114,8 @@
          "requires" : {
             "ExtUtils::MakeMaker" : "0",
             "File::Spec" : "0",
+            "IO::Handle" : "0",
+            "IPC::Open3" : "0",
             "Test::Mojo::Trim" : "0.03",
             "Test::More" : "0.96"
          }
@@ -129,6 +132,10 @@
       },
       "Mojolicious::Plugin::BootstrapHelpers4::Component::Button" : {
          "file" : "lib/Mojolicious/Plugin/BootstrapHelpers4/Component/Button.pm",
+         "version" : "0.0001"
+      },
+      "Mojolicious::Plugin::BootstrapHelpers4::Component::CDN" : {
+         "file" : "lib/Mojolicious/Plugin/BootstrapHelpers4/Component/CDN.pm",
          "version" : "0.0001"
       },
       "Mojolicious::Plugin::BootstrapHelpers4::Component::Label" : {

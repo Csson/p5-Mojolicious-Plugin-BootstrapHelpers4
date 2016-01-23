@@ -2,11 +2,11 @@
 
 Mojolicious::Plugin::BootstrapHelpers4 - Type less Bootstrap (v4)
 
-![Requires Perl 5.20](https://img.shields.io/badge/perl-5.20-brightgreen.svg) [![Travis status](https://api.travis-ci.org/Csson/p5-Mojolicious-Plugin-BootstrapHelpers4.svg?branch=master)](https://travis-ci.org/Csson/p5-Mojolicious-Plugin-BootstrapHelpers4)
+![Requires Perl 5.20+](https://img.shields.io/badge/perl-5.20+-brightgreen.svg) [![Travis status](https://api.travis-ci.org/Csson/p5-Mojolicious-Plugin-BootstrapHelpers4.svg?branch=master)](https://travis-ci.org/Csson/p5-Mojolicious-Plugin-BootstrapHelpers4) 
 
 # VERSION
 
-Version 0.0001, released 2016-01-07.
+Version 0.0001, released 2016-01-23.
 
 # SYNOPSIS
 

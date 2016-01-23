@@ -19,7 +19,7 @@ With a url the button turns into a link:
     %= button 'The example 1' => ['http://www.example.com/'], qwr('sm')
 --end input--
 --output--
-    <a class="btn btn-default btn-sm" href="http://www.example.com/" role="button">The example 1</a>
+    <a class="btn btn-primary btn-sm" href="http://www.example.com/" role="button">The example 1</a>
 --end output--
 
 
@@ -52,7 +52,7 @@ A submit button for posting forms:
     %= button 'The example 2' => [url_for]
 --end input--
 --output--
-    <a class="btn btn-default" href="/button_50" role="button">The example 2</a>
+    <a class="btn btn-primary" href="/button_50" role="button">The example 2</a>
 --end output--
 
 == stencil { to_pod => 0 } ==
@@ -60,7 +60,7 @@ A submit button for posting forms:
     %= button 'The example 3' => ['panel_1']
 --end input--
 --output--
-    <a class="btn btn-default" href="panel_1" role="button">The example 3</a>
+    <a class="btn btn-primary" href="panel_1" role="button">The example 3</a>
 --end output--
 
 
@@ -69,7 +69,7 @@ A submit button for posting forms:
     %= button 'The example 4'
 --end input--
 --output--
-    <button class="btn btn-default" type="button">The example 4</button>
+    <button class="btn btn-primary" type="button">The example 4</button>
 --end output--
 
 
@@ -80,7 +80,7 @@ A submit button for posting forms:
     %  end
 --end input--
 --output--
-    <a class="btn btn-default disabled" href="/button_76" role="button"> The Example 6 </a>
+    <a class="btn btn-primary disabled" href="/button_76" role="button"> The Example 6 </a>
 --end output--
 
 
@@ -89,7 +89,7 @@ A submit button for posting forms:
     %= submit 'Save 1'
 --end input--
 --output--
-    <input class="btn btn-default" type="submit" value="Save 1" />
+    <input class="btn btn-primary" type="submit" value="Save 1" />
 --end output--
 
 == stencil { loop => [qw/active block/] } ==
@@ -97,6 +97,18 @@ A submit button for posting forms:
     %= button 'Loop', qwr('[var]')
 --end input--
 --output--
-    <button class="btn btn-default [var]" type="button">Loop</button>
+    <button class="btn btn-primary [var]" type="button">Loop</button>
+--end output--
+
+
+== stencil { to_pod => 0 } ==
+
+A toggle button
+
+--input--
+    %= button 'Can toggle', qwr('active toggle danger')
+--end input--
+--output--
+    <button aria-pressed="true" class="btn btn-danger active toggle" data-toggle="button" type="button">Can toggle</button>
 --end output--
 
